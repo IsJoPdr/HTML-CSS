@@ -4,6 +4,10 @@
   box-sizing: border-box;
   
 }
+
+html {
+  font-size: 93.75%;
+}
 body {
   background-color: #f0f2f5;
 }
@@ -14,6 +18,27 @@ h2 {
  font-weight: normal;
 }
 
+a {
+  color: #49aa26;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3dd705;
+}
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: White ;
+  background: #49AA26;
+  padding: 0;
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
+button:hover {
+  background: #3dd705;
+}
 header {
   background-color: green;
   padding: 2em 0 10em;
@@ -37,12 +62,30 @@ header {
   color: #fff;
   font-weight: 150;
 }
+#trans {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  
+}
 #table-card {
   width: 100%;
   border-spacing: 0rem 0.5rem;
-color: #969cb3;
+  color: #969cb3;
 }
-
+#form {
+  max-width: 500px;
+  
+}
+#form h2 {
+  margin-top: 0;
+}
+input {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  width: 100%;
+}
 table th {
   background: White;
   color: #969cb3;
@@ -62,6 +105,10 @@ table thead tr th:first-child,
 table tbody tr td:first-child {
   border-radius: 0.25rem 0 0 0.25rem;
 }
+table thead tr th:last-child,
+table tbody tr td:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
 table tr:hover {
   opacity: 1.5;
 }
@@ -77,6 +124,8 @@ table tr {
 .card h3 {
   font-weight: normal;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
 }
 .card p {
   font-size: 2rem;
@@ -96,10 +145,84 @@ td.ganho {
 td.perca {
  color: #e92929;
 }
+.only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: react(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.model-ov {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.model-ov.act {
+  opacity: 1;
+  visibility: visible;
+}
+.button.new {
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+.button.cancell {
+  color: red;
+  border: 2px red solid;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+.button.cancell:hover {
+  opacity: 1;
+}
+.model {
+  background-color: #F0F2f5;
+  padding: 2.4rem;
+  width: 90%;
+  max-width: 500px;
+}
+.input {
+  margin-top: 0.8rem;
+}
+.input small {
+  opacity: 0.4;
+}
+.input.ac {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input.ac .button, 
+.input.ac button {
+  width: 48%;
+}
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
   color: #363F5F;
   opacity: 0.6;
   
+}
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+  #balance {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
 }
